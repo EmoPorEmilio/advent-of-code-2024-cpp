@@ -15,15 +15,12 @@ int main() {
     freopen("output_a.txt", "w", stdout);
 
     int x, y;
-    //vector of ints
     vector<int> left, right;
 
     while (cin >> x >> y) {
         left.push_back(x);
         right.push_back(y);
     }
-
-    //sort the vectors
     std::sort(left.begin(), left.end());
     std::sort(right.begin(), right.end());
 
