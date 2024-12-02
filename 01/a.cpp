@@ -1,0 +1,40 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cmath>
+#include <algorithm>
+
+using namespace std;
+
+int calculate_distance(int x1, int x2) {
+    return abs(x1 - x2);
+}
+
+int main() {
+    freopen("input_a.txt", "r", stdin);
+    freopen("output_a.txt", "w", stdout);
+
+    int x, y;
+    //vector of ints
+    vector<int> left, right;
+
+    while (cin >> x >> y) {
+        left.push_back(x);
+        right.push_back(y);
+    }
+
+    //sort the vectors
+    std::sort(left.begin(), left.end());
+    std::sort(right.begin(), right.end());
+
+    int sum = 0;
+    while (!left.empty() && !right.empty()) {
+        sum += calculate_distance(left.back(), right.back());
+        left.pop_back();
+        right.pop_back();
+    }
+    printf("%d\n", sum);
+
+    return 0;               
+
+}
