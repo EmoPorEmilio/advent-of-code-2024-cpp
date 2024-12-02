@@ -11,8 +11,8 @@ int calculate_distance(int x1, int x2) {
 }
 
 int main() {
-    freopen("input_a.txt", "r", stdin);
-    freopen("output_a.txt", "w", stdout);
+    freopen("input.txt", "r", stdin);
+    freopen("output_b.txt", "w", stdout);
 
     int x, y;
     vector<int> left, right;
