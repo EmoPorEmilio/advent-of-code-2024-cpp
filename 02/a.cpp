@@ -14,7 +14,7 @@ int calculate_distance(int x1, int x2) {
 
 int main() {
     freopen("input.txt", "r", stdin);
-    freopen("output_b.txt", "w", stdout);
+    freopen("output_a.txt", "w", stdout);
     string line;
     int sum = 0;
     while (getline(cin, line)) {        
