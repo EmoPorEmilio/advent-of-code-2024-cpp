@@ -45,11 +45,8 @@ int main() {
         int y = coordinates_of_a[i].second;
 
         if (x - 1 >= 0 && y - 1 >= 0 && x + 1 < matrix.size() && y + 1 < matrix[x].size())  {
-            if ((matrix[x - 1][y - 1] == 'M' && matrix[x + 1][y + 1] == 'S') || (matrix[x + 1][y + 1] == 'M' && matrix[x - 1][y - 1] == 'S')) {
-                sum += 1;
-            }
-            
-            if ((matrix[x - 1][y + 1] == 'M' && matrix[x + 1][y - 1] == 'S') || (matrix[x + 1][y - 1] == 'M' && matrix[x - 1][y + 1] == 'S')) {
+            if (((matrix[x - 1][y - 1] == 'M' && matrix[x + 1][y + 1] == 'S') || (matrix[x + 1][y + 1] == 'M' && matrix[x - 1][y - 1] == 'S'))
+                && ((matrix[x - 1][y + 1] == 'M' && matrix[x + 1][y - 1] == 'S') || (matrix[x + 1][y - 1] == 'M' && matrix[x - 1][y + 1] == 'S'))) {
                 sum += 1;
             }
         }
